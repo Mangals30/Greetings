@@ -4,7 +4,7 @@ import Aftenoon from '../Images/afternoon.jpg'
 import Evening from '../Images/sunset.jpg'
 
 const Nature = (props) => {
-    const {user,dateToday} = props
+    const {dateToday} = props
     let greetings = 'Morning'
     let image = Morning
     const hour = new Date().getHours()
@@ -22,15 +22,14 @@ const Nature = (props) => {
     }
     
     let backgroundStyle = {
-
-        background: `url(${image})no-repeat center center/cover`
+        background: `url(${image})no-repeat center center/cover`,
       }
 
 
     return (
-        <div className = "container" style = {backgroundStyle}>
+        <div className='greetings' style = {backgroundStyle}>
             <h1 className = "timer">{dateToday}</h1>
-            <h1> Good {greetings} {user}</h1>
+            <h1> Good {greetings}</h1>
         </div>
     )
 }
